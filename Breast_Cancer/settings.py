@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-(n5wxopvve7-g^)5fyhqyhs=t290y*+4ccj+k$%+j#i_tj6_k#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['breast-cancer-detector-web.herokuapp.com']
 
 
 # Application definition
@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'Breast_Cancer.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd3bqm617lqgt07',
+        'USER': 'socumahougxath',
+        'PASSWORD': '5a10e2fa4cb0e61da7214e3a280864bfe82fefb2ee761931d78f28538a48ecee',
+        'HOST': 'ec2-184-73-198-174.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
